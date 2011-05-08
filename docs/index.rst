@@ -190,7 +190,7 @@ directory.  (You have to use ``source`` because it changes your shell
 environment in-place.) This is all it does; it's purely a convenience.  If
 you directly run a script or the python interpreter from the virtualenv's
 ``bin/`` directory (e.g.  ``path/to/env/bin/pip`` or
-``/path/to/env/bin/python script.py``) there's no need for activation. 
+``/path/to/env/bin/python script.py``) there's no need for activation.
 
 After activating an environment you can use the function ``deactivate`` to
 undo the changes to your ``$PATH``.
