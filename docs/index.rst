@@ -96,9 +96,8 @@ the `win32api <http://sourceforge.net/projects/pywin32/>`_ library installed.
 PyPy Support
 ~~~~~~~~~~~~
 
-Beginning with virtualenv version 1.5 `PyPy <http://pypy.org>`_ is
-supported. To use PyPy 1.4 or 1.4.1, you need a version of virtualenv >= 1.5.
-To use PyPy 1.5, you need a version of virtualenv >= 1.6.1.
+Beginning with virtualenv version 1.5 there is experimental `PyPy
+<http://pypy.org>`_ support. Currently only PyPy trunk is supported.
 
 Creating Your Own Bootstrap Scripts
 -----------------------------------
@@ -190,7 +189,7 @@ directory.  (You have to use ``source`` because it changes your shell
 environment in-place.) This is all it does; it's purely a convenience.  If
 you directly run a script or the python interpreter from the virtualenv's
 ``bin/`` directory (e.g.  ``path/to/env/bin/pip`` or
-``/path/to/env/bin/python script.py``) there's no need for activation.
+``/path/to/env/bin/python script.py``) there's no need for activation. 
 
 After activating an environment you can use the function ``deactivate`` to
 undo the changes to your ``$PATH``.
