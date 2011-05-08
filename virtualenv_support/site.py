@@ -236,7 +236,7 @@ def addsitepackages(known_paths, sys_prefix=sys.prefix, exec_prefix=sys.exec_pre
                             os.path.join(prefix, "lib", "site-python"),
                             os.path.join(prefix, "python" + sys.version[:3], "lib-dynload")]
                 lib64_dir = os.path.join(prefix, "lib64", "python" + sys.version[:3], "site-packages")
-                if (os.path.exists(lib64_dir) and 
+                if (os.path.exists(lib64_dir) and
                     os.path.realpath(lib64_dir) not in [os.path.realpath(p) for p in sitedirs]):
                     sitedirs.append(lib64_dir)
                 try:
@@ -605,14 +605,14 @@ def force_global_eggs_after_local_site_packages():
     maintains the "least surprise" result that packages in the
     virtualenv always mask global packages, never the other way
     around.
-    
+
     """
     egginsert = getattr(sys, '__egginsert', 0)
     for i, path in enumerate(sys.path):
         if i > egginsert and path.startswith(sys.prefix):
             egginsert = i
     sys.__egginsert = egginsert + 1
-    
+
 def virtual_addsitepackages(known_paths):
     force_global_eggs_after_local_site_packages()
     return addsitepackages(known_paths, sys_prefix=sys.real_prefix)
